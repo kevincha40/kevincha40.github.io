@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="郭伟华官方网站。收录郭伟华的生平简介、代表作品、影视作品、舞台剧及艺术成就，提供相关资讯与粉丝互动平台。">
+    <meta name="keywords" content="郭伟华, 郭伟华简介, 郭伟华作品, 郭伟华影视, 郭伟华舞台剧">
+    <title>郭伟华-著名表演艺术家与影视演员官方网站</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-color: #c8102e;
+            --text-color: #333333;
+            --text-light: #666666;
+            --bg-color: #f9f9f9;
+            --white: #ffffff;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            font-weight: 500;
+            color: var(--text-color);
+            position: relative;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--accent-color);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 6rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-tagline {
+            color: var(--accent-color);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #cccccc;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .hero-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .hero-image img {
+            border-radius: var(--border-radius);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background-color: var(--white);
+            padding: 2rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(200, 16, 46, 0.1);
+            color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.2rem;
+        }
+
+        /* Works Section */
+        .works {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .work-card {
+            background-color: var(--bg-color);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: var(--transition);
+            cursor: pointer;
+            border: 1px solid #eee;
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .work-card-img {
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .work-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .work-card:hover .work-card-img img {
+            transform: scale(1.05);
+        }
+
+        .work-card-content {
+            padding: 1.5rem;
+        }
+
+        .work-card-tag {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .work-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .work-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Timeline Section */
+        .timeline {
+            padding: 5rem 0;
+            background-color: var(--bg-color);
+        }
+
+        .timeline-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            border: 3px solid var(--white);
+            box-shadow: 0 0 0 2px var(--accent-color);
+        }
+
+        .timeline-date {
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .timeline-content h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            color: var(--text-light);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info p {
+            color: #cccccc;
+            margin-bottom: 2rem;
+        }
+
+        .contact-details div {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-form {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            color: var(--text-color);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: #888;
+            padding: 3rem 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-links a {
+            margin-left: 1.5rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero-content {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-grid,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-links a {
+                margin: 0 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">GUO WEIHUA</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="active">首页</a></li>
+                    <li><a href="#about">生平简介</a></li>
+                    <li><a href="#works">代表作品</a></li>
+                    <li><a href="#news">演艺生涯</a></li>
+                    <li><a href="#contact">联系合作</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="hero-tagline">资深表演艺术家</span>
+                    <h1>郭伟华<br>舞台与银幕的坚守者</h1>
+                    <p>致力于塑造深入人心的角色，在影视与话剧领域拥有极高的艺术造诣。探索郭伟华的艺术世界，感受表演的魅力。</p>
+                    <a href="#works" class="btn btn-primary">查看作品集</a>
+                    <a href="#about" class="btn" style="background: rgba(255,255,255,0.1); margin-left: 1rem;">了解更多</a>
+                </div>
+                <div class="hero-image">
+                    <!-- Placeholder for Artist Portrait -->
+                    <img src="https://picsum.photos/seed/artist_portrait_01/600/800" alt="郭伟华肖像">
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <div class="stats-bar">
+            <div class="container stats-grid">
+                <div class="stat-item">
+                    <h3>40+</h3>
+                    <p>影视作品</p>
+                </div>
+                <div class="stat-item">
+                    <h3>20+</h3>
+                    <p>舞台剧经验</p>
+                </div>
+                <div class="stat-item">
+                    <h3>15</h3>
+                    <p>获奖荣誉</p>
+                </div>
+                <div class="stat-item">
+                    <h3>30年</h3>
+                    <p>演艺生涯</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">关于郭伟华</h2>
+                <p class="section-subtitle">在光影与舞台之间，用真诚诠释每一个角色。</p>
+                
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="https://picsum.photos/seed/artist_studio/600/400" alt="郭伟华工作照" style="border-radius: var(--border-radius);">
+                    </div>
+                    <div class="about-text">
+                        <h3>从艺历程与艺术追求</h3>
+                        <br>
+                        <p>郭伟华，著名表演艺术家，从事演艺事业数十年，横跨影视、话剧及电视剧领域。他以其深厚的表演功底和独特的艺术风格，在观众心中留下了深刻的印象。</p>
+                        <p>郭伟华始终保持着对表演艺术的敬畏之心。无论是在大型历史题材的影视剧中，还是在需要细腻情感的舞台剧中，他都能精准地捕捉角色的内心世界，赋予角色鲜活的生命力。他的表演风格沉稳大气，既有传统戏曲的韵味，又不失现代影视的张力。</p>
+                        
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">★</div>
+                                <div>
+                                    <h4>专业严谨</h4>
+                                    <p style="font-size: 0.85rem; margin-top: 0.2rem;">对剧本反复研读，追求细节完美</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">★</div>
+                                <div>
+                                    <h4>戏路宽广</h4>
+                                    <p style="font-size: 0.85rem; margin-top: 0.2rem;">能驾驭正剧、喜剧及各类性格角色</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">★</div>
+                                <div>
+                                    <h4>桃李芬芳</h4>
+                                    <p style="font-size: 0.85rem; margin-top: 0.2rem;">投身艺术教育事业，培养新生力量</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">★</div>
+                                <div>
+                                    <h4>德艺双馨</h4>
+                                    <p style="font-size: 0.85rem; margin-top: 0.2rem;">业内公认的优秀演员典范</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Works Section -->
+        <section id="works" class="works">
+            <div class="container">
+                <h2 class="section-title">代表作品</h2>
+                <p class="section-subtitle">精选郭伟华参演的经典影视与舞台剧目。</p>
+
+                <div class="works-grid">
+                    <!-- Work 1 -->
+                    <article class="work-card">
+                        <div class="work-card-img">
+                            <img src="https://picsum.photos/seed/film_1/400/600" alt="作品海报">
+                        </div>
+                        <div class="work-card-content">
+                            <span class="work-card-tag">电视剧</span>
+                            <h3>岁月如歌</h3>
+                            <p>饰演男主角，讲述改革开放以来的社会变迁与个人命运。</p>
+                        </div>
+                    </article>
+
+                    <!-- Work 2 -->
+                    <article class="work-card">
+                        <div class="work-card-img">
+                            <img src="https://picsum.photos/seed/film_2/400/600" alt="作品海报">
+                        </div>
+                        <div class="work-card-content">
+                            <span class="work-card-tag">话剧</span>
+                            <h3>雷雨前夜</h3>
+                            <p>在国家大剧院主演的历史正剧，展现深厚的台词功底。</p>
+                        </div>
+                    </article>
+
+                    <!-- Work 3 -->
+                    <article class="work-card">
+                        <div class="work-card-img">
+                            <img src="https://picsum.photos/seed/film_3/400/600" alt="作品海报">
+                        </div>
+                        <div class="work-card-content">
+                            <span class="work-card-tag">电影</span>
+                            <h3>迷雾森林</h3>
+                            <p>凭借该片获得最佳男配角提名，演技备受好评。</p>
+                        </div>
+                    </article>
+
+                    <!-- Work 4 -->
+                    <article class="work-card">
+                        <div class="work-card-img">
+                            <img src="https://picsum.photos/seed/film_4/400/600" alt="作品海报">
+                        </div>
+                        <div class="work-card-content">
+                            <span class="work-card-tag">经典剧集</span>
+                            <h3>英雄本色</h3>
+                            <p>饰演重要配角，塑造了一个令人难忘的硬汉形象。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline / News Section -->
+        <section id="news" class="timeline">
+            <div class="container">
+                <h2 class="section-title">演艺生涯</h2>
+                <p class="section-subtitle">重要节点与荣誉回顾。</p>
+
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <span class="timeline-date">1985年</span>
+                        <div class="timeline-content">
+                            <h3>初登银幕</h3>
+                            <p>参演首部电影《青春的起点》，正式进入影视圈，开启演艺生涯。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">1992年</span>
+                        <div class="timeline-content">
+                            <h3>话剧舞台成名</h3>
+                            <p>主演话剧《茶馆》，凭借精湛的演技在戏剧界崭露头角。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">2005年</span>
+                        <div class="timeline-content">
+                            <h3>影视高峰</h3>
+                            <p>主演多部大型历史剧，成为当时炙手可热的实力派演员。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">2018年</span>
+                        <div class="timeline-content">
+                            <h3>荣誉加身</h3>
+                            <p>获得“国家一级演员”称号，并受邀担任多所艺术院校客座教授。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container contact-container">
+                <div class="contact-info">
+                    <h2>联系与合作</h2>
+                    <p>欢迎各大影视剧组、话剧团及媒体机构联系洽谈合作事宜。如有演出邀约或媒体采访需求，请通过以下方式联系。</p>
+                    
+                    <div class="contact-details">
+                        <div>
+                            <span>📍</span>
+                            <span>中国北京市朝阳区艺术园区88号</span>
+                        </div>
+                        <div>
+                            <span>📧</span>
+                            <span>contact@guoweihua-official.com</span>
+                        </div>
+                        <div>
+                            <span>📞</span>
+                            <span>+86 10 8888 6666</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form onsubmit="event.preventDefault(); alert('感谢您的留言，我们会尽快与您联系。');">
+                        <div class="form-group">
+                            <label for="name">您的姓名</label>
+                            <input type="text" id="name" placeholder="请输入姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">联系方式</label>
+                            <input type="email" id="email" placeholder="请输入邮箱或电话" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">留言内容</label>
+                            <textarea id="message" rows="4" placeholder="请简述您的合作意向..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">发送留言</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>GUO WEIHUA</h3>
+                <p>专注表演艺术</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">首页</a>
+                <a href="#about">简介</a>
+                <a href="#works">作品</a>
+                <a href="#contact">联系</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 郭伟华官方网站. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
