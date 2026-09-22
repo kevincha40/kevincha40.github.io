@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="深入解析卑触家的规矩，探讨这一独特文化现象的起源、核心行为准则、社会影响及现代应用。提供全面的规则指南与行为建议。">
+    <meta name="keywords" content="卑触家的规矩, 触手文化, 规则怪谈, 亚文化, 触手设定, 规则指南">
+    <title>卑触家的规矩-触手亚文化规则指南与行为准则解析</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f4f6f8;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        /* Content Section */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+        }
+
+        .intro-text {
+            margin-bottom: 30px;
+        }
+
+        .intro-text p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Rules Grid */
+        .rules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .rule-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .rule-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .rule-card h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .rule-card p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .rule-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .sidebar-widget h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
+            cursor: pointer;
+            color: var(--text-main);
+        }
+
+        .faq-answer {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 20px;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px;
+            }
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span>◆</span> 卑触家规矩
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#intro">起源</a></li>
+                    <li><a href="#rules">核心规则</a></li>
+                    <li><a href="#etiquette">礼仪指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>探索未知的边界</h1>
+        <p>卑触家规矩并非单纯的恐惧，而是一种基于触觉、本能与心理博弈的独特文化符号。本文为您系统梳理其内在逻辑与行为准则。</p>
+        <a href="#rules" class="btn">查看完整规则</a>
+    </section>
+
+    <main class="container">
+        <!-- Main Content -->
+        <div class="main-content">
+            <article id="intro">
+                <h2 class="section-title">什么是卑触家规矩？</h2>
+                <div class="intro-text">
+                    <p>“卑触家”通常指涉那些在特定文化圈层或亚文化作品中，以触手、异形肢体为主要特征的角色或实体。与之相关的“规矩”，更多是指这类角色在互动中需要遵循的设定逻辑、心理契约以及潜在的生存法则。这并非现实中的法律，而是虚构叙事中的隐性规则。</p>
+                    <p>理解这些规矩，有助于我们更好地欣赏相关作品中的张力与美感，同时也为创作者提供了构建沉浸式体验的框架。核心在于“尊重设定”与“心理界限”的平衡。</p>
+                </div>
+            </article>
+
+            <section id="rules">
+                <h2 class="section-title">核心行为准则</h2>
+                <div class="rules-grid">
+                    <div class="rule-card">
+                        <span class="rule-icon">①</span>
+                        <h3>知情同意原则</h3>
+                        <p>在任何形式的接触或互动开始前，必须确保对方（或对方角色）具备知情权与拒绝权。这是“规矩”的基石。</p>
+                    </div>
+                    <div class="rule-card">
+                        <span class="rule-icon">②</span>
+                        <h3>触感反馈机制</h3>
+                        <p>接触过程应注重反馈。过度的压迫或无法控制的力度可能导致“规矩”的崩坏，引发不可预知的后果。</p>
+                    </div>
+                    <div class="rule-card">
+                        <span class="rule-icon">③</span>
+                        <h3>界限设定</h3>
+                        <p>明确物理与心理的边界。一旦越界，往往意味着规则的变更或契约的解除。</p>
+                    </div>
+                    <div class="rule-card">
+                        <span class="rule-icon">④</span>
+                        <h3>环境适应性</h3>
+                        <p>卑触家角色通常对环境有极强的适应性。互动者需注意周围环境是否限制了角色的行动自由。</p>
+                    </div>
+                    <div class="rule-card">
+                        <span class="rule-icon">⑤</span>
+                        <h3>契约精神</h3>
+                        <p>无论是口头约定还是隐含默契，遵守既定的互动模式是维持关系稳定的关键。</p>
+                    </div>
+                    <div class="rule-card">
+                        <span class="rule-icon">⑥</span>
+                        <h3>心理承受力</h3>
+                        <p>双方（或多方）必须具备相应的心理承受能力，以应对规则变更带来的情绪波动。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="etiquette">
+                <h2 class="section-title">互动礼仪指南</h2>
+                <div class="intro-text">
+                    <p>在实际的社群讨论或同人创作中，遵循良好的礼仪能提升整体体验。</p>
+                    <ul style="margin-left: 20px; margin-top: 10px; color: var(--text-secondary);">
+                        <li><strong>尊重设定：</strong>不随意打破既定的世界观逻辑。</li>
+                        <li><strong>区分角色与演员：</strong>在讨论虚构角色的行为时，保持客观态度。</li>
+                        <li><strong>保护隐私：</strong>在涉及真实人物或未公开设定时，注意措辞。</li>
+                        <li><strong>文明用语：</strong>即使在激烈的讨论中，也请保持基本的交流礼仪。</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- Sidebar -->
+        <aside>
+            <div class="sidebar-widget">
+                <h3>常见问题 (FAQ)</h3>
+                <div class="faq-item active">
+                    <span class="faq-question">Q: 违反规矩会有什么后果？</span>
+                    <div class="faq-answer">A: 在虚构作品中，后果通常表现为角色的心理崩溃、设定的崩塌或剧情的突变。在现实讨论中，违反礼仪可能导致社群排斥或误解。</div>
+                </div>
+                <div class="faq-item">
+                    <span class="faq-question">Q: 如何判断是否适合参与此类互动？</span>
+                    <div class="faq-answer">A: 首先确认自己的心理承受能力，其次了解相关的设定背景，最后确保双方都有明确的意愿。</div>
+                </div>
+                <div class="faq-item">
+                    <span class="faq-question">Q: “卑触”这个词有特定的定义吗？</span>
+                    <div class="faq-answer">A: 它通常带有一种卑微、顺从或非人类感的触觉意象，常用于特定题材的描述中。</div>
+                </div>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>阅读建议</h3>
+                <ul style="font-size: 0.9rem; color: var(--text-secondary); line-height: 2;">
+                    <li>• 关注设定集的更新</li>
+                    <li>• 参考官方发布的规则说明</li>
+                    <li>• 加入活跃的讨论社区</li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 卑触家规矩解析站. All Rights Reserved.</p>
+        <p style="margin-top: 10px; font-size: 0.8rem; color: #888;">本站内容仅供文化探讨与学术参考，不代表任何现实立场。</p>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                item.querySelector('.faq-question').addEventListener('click', () => {
+                    // Close others
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
