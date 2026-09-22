@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="迷你世界国际服 - 提供全球玩家最热门的迷你世界MOD下载、皮肤素材、地图分享及联机攻略。收录国际服最新版本更新内容，解决连接问题，助你畅玩跨服冒险。">
+    <meta name="keywords" content="迷你世界国际服,迷你世界,国际版下载,迷你世界MOD,迷你世界地图,跨服联机">
+    <title>迷你世界国际服-全球玩家MOD下载与跨服联机指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #00d8ff;
+            --secondary-color: #3a7bd5;
+            --accent-color: #ff9a9e;
+            --bg-color: #f4f6f8;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 12px;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .btn-download {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        .btn-download:hover {
+            opacity: 0.9;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/seed/minecraft/1600/600') no-repeat center center/cover;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 32px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .btn-hero {
+            padding: 12px 32px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #000;
+        }
+
+        .btn-secondary {
+            background-color: rgba(255,255,255,0.2);
+            color: white;
+            backdrop-filter: blur(5px);
+        }
+
+        .btn-hero:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Features Grid */
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+
+        /* Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-tag {
+            background-color: #e3f2fd;
+            color: var(--secondary-color);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+            font-size: 1.25rem;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .sidebar-widget h4 {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .download-list li {
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .download-list a {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+
+        .download-list a:hover {
+            color: var(--primary-color);
+        }
+
+        .download-list span {
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            margin-bottom: 60px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 40px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h5 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: #95a5a6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .content-grid { grid-template-columns: 1fr; }
+            .nav-wrapper { flex-direction: column; height: auto; padding: 10px 0; }
+            nav ul { margin-top: 10px; flex-wrap: wrap; justify-content: center; }
+            .btn-download { margin-top: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">Mini<span>World</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">MOD下载</a></li>
+                    <li><a href="#">地图工坊</a></li>
+                    <li><a href="#">皮肤中心</a></li>
+                    <li><a href="#">攻略教程</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="btn-download">国际服下载</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>迷你世界国际服</h1>
+                <p>连接全球玩家，体验无国界的创造与冒险。海量MOD、自定义地图与跨服联机功能，让创意无限延伸。</p>
+                <div class="hero-buttons">
+                    <button class="btn-hero btn-primary">立即下载客户端</button>
+                    <button class="btn-hero btn-secondary">观看安装教程</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Feature Highlights -->
+            <section>
+                <h2 class="section-title">国际服核心优势</h2>
+                <div class="features">
+                    <article class="feature-card">
+                        <div class="feature-icon">🌍</div>
+                        <h3>全球联机</h3>
+                        <p>突破服务器限制，与海外玩家实时互动，参与国际级创意竞技。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>创意工坊</h3>
+                        <p>接入Steam创意工坊，海量第三方MOD一键安装，丰富游戏体验。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🎮</div>
+                        <h3>多人竞技</h3>
+                        <p>支持自定义规则，无论是生存挑战还是PVP竞技，都能找到同好。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🛠️</div>
+                        <h3>自由创造</h3>
+                        <p>无需联网也能尽情创造，保存本地作品，随时随地进行沙盒搭建。</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Main Content Area -->
+            <div class="content-grid">
+                <section>
+                    <h2 class="section-title">热门资源推荐</h2>
+                    
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/tech/800/400" alt="科幻机械MOD" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">MOD推荐</span>
+                            <h3>硬核科幻机械MOD包</h3>
+                            <p>包含动力装甲、激光武器及自动化生产线，大幅提升生存难度与科技感。适合硬核玩家挑战极限生存。</p>
+                            <div class="card-footer">
+                                <span>更新于: 2023-10-24</span>
+                                <a href="#">下载详情 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/castle/800/400" alt="中世纪城堡地图" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">地图分享</span>
+                            <h3>云端之上的中世纪王庭</h3>
+                            <p>一座建在浮空岛上的宏伟城堡，拥有完整的防御体系和隐藏宝库，支持多人合作探索。</p>
+                            <div class="card-footer">
+                                <span>更新于: 2023-10-22</span>
+                                <a href="#">进入地图 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/animal/800/400" alt="动物驯化指南" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">生存攻略</span>
+                            <h3>国际服生物图鉴与驯化</h3>
+                            <p>详细介绍国际服特有的生物种类、掉落物以及驯化方法，助你打造最强坐骑战队。</p>
+                            <div class="card-footer">
+                                <span>更新于: 2023-10-20</span>
+                                <a href="#">阅读攻略 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                <aside>
+                    <div class="sidebar-widget">
+                        <h4>热门下载</h4>
+                        <ul class="download-list">
+                            <li>
+                                <a href="#">迷你世界国际版 v3.9.0</a>
+                                <span>2.4GB</span>
+                            </li>
+                            <li>
+                                <a href="#">光影渲染器 Shader Pack</a>
+                                <span>15MB</span>
+                            </li>
+                            <li>
+                                <a href="#">宠物系统MOD合集</a>
+                                <span>8MB</span>
+                            </li>
+                            <li>
+                                <a href="#">异星生物皮肤包</a>
+                                <span>5MB</span>
+                            </li>
+                            <li>
+                                <a href="#">多人联机房间卡</a>
+                                <span>1MB</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4>社区热议</h4>
+                        <ul class="download-list">
+                            <li><a href="#"># 全球服服务器推荐 #</a></li>
+                            <li><a href="#"># 新版本BUG反馈 #</a></li>
+                            <li><a href="#"># 最好看的建筑分享 #</a></li>
+                            <li><a href="#"># 联机卡顿解决方法 #</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <h2 class="section-title">常见问题解答</h2>
+                <div class="faq-item">
+                    <div class="faq-question">Q1: 迷你世界国际服和国内版有什么区别？</div>
+                    <div class="faq-answer">国际服主要面向海外市场，界面语言为英语，拥有Steam创意工坊支持，部分MOD和皮肤与国内版不同步，且网络环境更侧重跨国联机。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Q2: 如何在电脑上下载并安装国际服？</div>
+                    <div class="faq-answer">请访问官方网站，点击下载PC版客户端。安装后启动游戏，使用官方注册的海外账号（如Google、Facebook）进行登录即可。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Q3: 下载MOD时提示文件损坏怎么办？</div>
+                    <div class="faq-answer">请确保您的游戏版本与MOD版本号匹配。建议使用游戏内的“创意工坊”功能订阅MOD，系统会自动处理版本兼容性问题。</div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h5>关于我们</h5>
+                    <p style="color: #bdc3c7; font-size: 0.9rem;">
+                        本站专注于迷你世界国际服的资讯分享与资源整理，为全球玩家提供最优质的MOD下载和联机服务。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h5>快速链接</h5>
+                    <ul>
+                        <li><a href="#">游戏下载</a></li>
+                        <li><a href="#">MOD中心</a></li>
+                        <li><a href="#">地图工坊</a></li>
+                        <li><a href="#">用户协议</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>帮助支持</h5>
+                    <ul>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">联系客服</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                        <li><a href="#">加入社区</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 MiniWorld International Guide. All Rights Reserved. 非官方网站，仅供交流学习使用。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
