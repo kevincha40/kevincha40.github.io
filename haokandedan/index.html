@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="好看的耽美小说在线阅读平台，收录高质量纯爱、BG向小说推荐，提供分类导航、热门榜单及作者作品列表，满足读者阅读需求。">
+    <meta name="keywords" content="好看的耽美小说,耽美小说推荐,纯爱小说,在线阅读,小说排行榜">
+    <title>好看的耽美小说-精选纯爱小说推荐与阅读指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8e44ad;
+            --secondary-color: #9b59b6;
+            --accent-color: #ff6b81;
+            --bg-color: #fdf6f8;
+            --card-bg: #ffffff;
+            --text-main: #2c3e50;
+            --text-sub: #7f8c8d;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --spacing: 24px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .search-bar {
+            display: flex;
+            background: #f0f0f0;
+            border-radius: 20px;
+            padding: 5px 15px;
+            width: 300px;
+        }
+
+        .search-bar input {
+            border: none;
+            background: transparent;
+            outline: none;
+            flex: 1;
+            padding: 5px;
+        }
+
+        .search-bar button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-sub);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Category Nav */
+        .category-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .cat-btn {
+            padding: 8px 20px;
+            background: var(--card-bg);
+            border: 1px solid #eee;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+
+        .cat-btn.active, .cat-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* Main Grid */
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            .search-bar {
+                display: none;
+            }
+            nav ul {
+                display: none; /* Simplified for mobile */
+            }
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-left: 12px;
+            border-left: 4px solid var(--accent-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .book-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .book-cover {
+            width: 100%;
+            height: 240px;
+            background-color: #eee;
+            position: relative;
+        }
+
+        .book-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .book-info {
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .book-author {
+            font-size: 13px;
+            color: var(--text-sub);
+            margin-bottom: 10px;
+        }
+
+        .book-desc {
+            font-size: 12px;
+            color: #666;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin-bottom: 15px;
+            flex: 1;
+        }
+
+        .book-action {
+            margin-top: auto;
+        }
+
+        .read-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 8px;
+            background-color: var(--bg-color);
+            color: var(--primary-color);
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid var(--primary-color);
+        }
+
+        .read-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Sidebar */
+        .sidebar-section {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .rank-list li {
+            display: flex;
+            gap: 10px;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .rank-list li:last-child {
+            border-bottom: none;
+        }
+
+        .rank-num {
+            font-weight: 700;
+            color: var(--text-sub);
+            width: 20px;
+        }
+
+        .rank-info h4 {
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .rank-info p {
+            font-size: 12px;
+            color: var(--text-sub);
+        }
+
+        /* Features Grid */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .feature-item {
+            background: var(--card-bg);
+            padding: 30px 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .feature-item h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            font-size: 13px;
+            color: var(--text-sub);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #34495e;
+            padding-top: 20px;
+            font-size: 13px;
+        }
+
+        /* Utility */
+        .badge {
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 5px;
+        }
+        .badge-new { background: #e1f5fe; color: #0288d1; }
+        .badge-hot { background: #ffebee; color: #d32f2f; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">纯爱<span>小说馆</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">分类</a></li>
+                    <li><a href="#">排行榜</a></li>
+                    <li><a href="#">作者专区</a></li>
+                    <li><a href="#">书架</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="搜索好看的耽美小说...">
+                <button>🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>发现好看的小说</h1>
+            <p>汇聚全网热门纯爱作品，无论是校园、职场还是奇幻冒险，这里都有你期待的故事。</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="category-nav">
+            <button class="cat-btn active">全部</button>
+            <button class="cat-btn">现言</button>
+            <button class="cat-btn">古风</button>
+            <button class="cat-btn">奇幻</button>
+            <button class="cat-btn">校园</button>
+            <button class="cat-btn">娱乐圈</button>
+        </div>
+
+        <div class="main-content">
+            <!-- Book List Section -->
+            <main>
+                <div class="section-title">
+                    <span>热门推荐</span>
+                    <a href="#" style="font-size: 14px; color: var(--text-sub);">查看更多 &gt;</a>
+                </div>
+                
+                <div class="book-grid">
+                    <!-- Book 1 -->
+                    <article class="book-card">
+                        <div class="book-cover">
+                            <span class="tag badge-new">最新</span>
+                            <img src="https://picsum.photos/seed/b1/300/400" alt="小说封面">
+                        </div>
+                        <div class="book-info">
+                            <h3 class="book-title"><a href="#">他在逆光中告白</a></h3>
+                            <p class="book-author">作者：木苏里</p>
+                            <p class="book-desc">少年时期的暗恋与救赎，光影交错下的深情告白，甜虐交织的青春故事。</p>
+                            <div class="book-action">
+                                <a href="#" class="read-btn">立即阅读</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book 2 -->
+                    <article class="book-card">
+                        <div class="book-cover">
+                            <span class="tag badge-hot">高热</span>
+                            <img src="https://picsum.photos/seed/b2/300/400" alt="小说封面">
+                        </div>
+                        <div class="book-info">
+                            <h3 class="book-title"><a href="#">撒野</a></h3>
+                            <p class="book-author">作者：巫哲</p>
+                            <p class="book-desc">两个少年互相支撑，走出人生低谷，关于友情、梦想与成长的治愈之作。</p>
+                            <div class="book-action">
+                                <a href="#" class="read-btn">立即阅读</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book 3 -->
+                    <article class="book-card">
+                        <div class="book-cover">
+                            <img src="https://picsum.photos/seed/b3/300/400" alt="小说封面">
+                        </div>
+                        <div class="book-info">
+                            <h3 class="book-title"><a href="#">天官赐福</a></h3>
+                            <p class="book-author">作者：墨香铜臭</p>
+                            <p class="book-desc">鬼神志怪，神官与鬼王的羁绊，宏大的世界观与细腻的情感描写。</p>
+                            <div class="book-action">
+                                <a href="#" class="read-btn">立即阅读</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book 4 -->
+                    <article class="book-card">
+                        <div class="book-cover">
+                            <span class="tag badge-new">连载</span>
+                            <img src="https://picsum.photos/seed/b4/300/400" alt="小说封面">
+                        </div>
+                        <div class="book-info">
+                            <h3 class="book-title"><a href="#">某某</a></h3>
+                            <p class="book-author">作者：木苏里</p>
+                            <p class="book-desc">青春校园题材，细腻描绘了少年时代的暗恋与遗憾，文笔清新。</p>
+                            <div class="book-action">
+                                <a href="#" class="read-btn">立即阅读</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book 5 -->
+                    <article class="book-card">
+                        <div class="book-cover">
+                            <img src="https://picsum.photos/seed/b5/300/400" alt="小说封面">
+                        </div>
+                        <div class="book-info">
+                            <h3 class="book-title"><a href="#">破云</a></h3>
+                            <p class="book-author">作者：淮上</p>
+                            <p class="book-desc">刑侦题材，卧底警察与毒枭的博弈，紧张刺激的剧情与高智商对决。</p>
+                            <div class="book-action">
+                                <a href="#" class="read-btn">立即阅读</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Book 6 -->
+                    <article class="book-card">
+                        <div class="book-cover">
+                            <span class="tag badge-hot">完结</span>
+                            <img src="https://picsum.photos/seed/b6/300/400" alt="小说封面">
+                        </div>
+                        <div class="book-info">
+                            <h3 class="book-title"><a href="#">二哈和他的白猫师尊</a></h3>
+                            <p class="book-author">作者：肉包不吃肉</p>
+                            <p class="book-desc">修真界背景，师徒关系，爱恨纠葛，打破规则与宿命的宿命感。</p>
+                            <div class="book-action">
+                                <a href="#" class="read-btn">立即阅读</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="section-title" style="margin-top: 40px;">
+                    <span>最新上架</span>
+                </div>
+
+                <div class="book-grid">
+                     <article class="book-card">
+                        <div class="book-cover">
+                            <img src="https://picsum.photos/seed/b7/300/400" alt="小说封面">
+                        </div>
+                        <div class="book-info">
+                            <h3 class="book-title"><a href="#">伪装学渣</a></h3>
+                            <p class="book-author">作者：木瓜黄</p>
+                            <p class="book-desc">两个学霸假装学渣，在校园生活中互相拆台又互相扶持的搞笑日常。</p>
+                            <div class="book-action">
+                                <a href="#" class="read-btn">立即阅读</a>
+                            </div>
+                        </div>
+                    </article>
+                     <article class="book-card">
+                        <div class="book-cover">
+                            <img src="https://picsum.photos/seed/b8/300/400" alt="小说封面">
+                        </div>
+                        <div class="book-info">
+                            <h3 class="book-title"><a href="#">杀破狼</a></h3>
+                            <p class="book-author">作者： Priest</p>
+                            <p class="book-desc">乱世权谋，家国天下，一段跨越时空的羁绊与守护。</p>
+                            <div class="book-action">
+                                <a href="#" class="read-btn">立即阅读</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </main>
+
+            <!-- Sidebar -->
+            <aside>
+                <div class="sidebar-section">
+                    <div class="section-title" style="font-size: 1.2rem; margin-bottom: 15px;">今日热榜</div>
+                    <ul class="rank-list">
+                        <li>
+                            <span class="rank-num">1</span>
+                            <div class="rank-info">
+                                <h4><a href="#">将进酒</a></h4>
+                                <p>Priest</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rank-num">2</span>
+                            <div class="rank-info">
+                                <h4><a href="#">默读</a></h4>
+                                <p>Priest</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rank-num">3</span>
+                            <div class="rank-info">
+                                <h4><a href="#">全球高考</a></h4>
+                                <p>木苏里</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rank-num">4</span>
+                            <div class="rank-info">
+                                <h4><a href="#">破云2吞海</a></h4>
+                                <p>淮上</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rank-num">5</span>
+                            <div class="rank-info">
+                                <h4><a href="#">杀破狼</a></h4>
+                                <p>Priest</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="section-title" style="font-size: 1.2rem; margin-bottom: 15px;">热门标签</div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        <a href="#" style="background: #f5f5f5; padding: 4px 10px; border-radius: 4px; font-size: 12px;">校园</a>
+                        <a href="#" style="background: #f5f5f5; padding: 4px 10px; border-radius: 4px; font-size: 12px;">娱乐圈</a>
+                        <a href="#" style="background: #f5f5f5; padding: 4px 10px; border-radius: 4px; font-size: 12px;">重生</a>
+                        <a href="#" style="background: #f5f5f5; padding: 4px 10px; border-radius: 4px; font-size: 12px;">破镜重圆</a>
+                        <a href="#" style="background: #f5f5f5; padding: 4px 10px; border-radius: 4px; font-size: 12px;">无限流</a>
+                        <a href="#" style="background: #f5f5f5; padding: 4px 10px; border-radius: 4px; font-size: 12px;">年下</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="feature-item">
+                <div class="feature-icon">📚</div>
+                <h3>海量藏书</h3>
+                <p>收录超过十万本优质纯爱小说，满足不同口味阅读需求。</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">⚡</div>
+                <h3>极速阅读</h3>
+                <p>流畅的排版与加载速度，支持夜间模式，随时随地畅读。</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🤝</div>
+                <h3>互动社区</h3>
+                <p>加入书评区，与书友讨论剧情，分享你的阅读心得。</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🔒</div>
+                <h3>安全正版</h3>
+                <p>严格审核内容，支持正版支持作者，保护版权权益。</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="font-size: 13px; line-height: 1.8; color: #95a5a6;">
+                        纯爱小说馆致力于为耽美小说爱好者提供最优质的阅读体验。我们精选全网热门作品，致力于打造一个纯粹、健康的阅读社区。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">网站地图</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">联系客服</a></li>
+                        <li><a href="#">用户协议</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>阅读指南</h4>
+                    <ul>
+                        <li><a href="#">如何阅读</a></li>
+                        <li><a href="#">分类介绍</a></li>
+                        <li><a href="#">推荐书单</a></li>
+                        <li><a href="#">投稿通道</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 纯爱小说馆. All Rights Reserved. 本站内容仅供个人学习交流使用，请支持正版。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                  </html>
